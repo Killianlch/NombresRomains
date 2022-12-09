@@ -18,11 +18,8 @@ namespace NombresRomains
                 14 => "XIV",
                 <= 18 => "XV" + Convertir(nombreArabe - 15),
                 19 => "XIX",
-                20 => "XX",
-                21 => "XXI",
-                22 => "XXII",
-                23 => "XXIII",
-
+                <= 23 => "XX" + new string('I', nombreArabe - 20),
+                24 => "XXIV",
             };
 
 
