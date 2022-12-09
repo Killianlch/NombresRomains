@@ -1,7 +1,7 @@
 # NombresRomains
 ## Projet __LECHEVALIER Killian__
 
-* Les test de 1 à 30 se trouve en haut du fichier UnitTest1.
+* Les tests de 1 à 30 se trouve en haut du fichier UnitTest1.
 
 * Les tests refactorisé se trouve en bas du fichier UnitTest1.
 
