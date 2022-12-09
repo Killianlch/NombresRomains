@@ -52,6 +52,30 @@ namespace NombresRomains.test
             //ALORS on obtient 'IV'
             Assert.Equal("IV", resultat);
         }
+        [Fact]
+        public void Test5()
+        {
+            //ETANT DONNE le nombre 5
+            const int nombreArabe = 5;
+
+            //QUAND on le convertit en nombres romains
+            var resultat = ConvertisseurNombresRomains.Convertir(5);
+
+            //ALORS on obtient 'V'
+            Assert.Equal("V", resultat);
+        }
+        [Fact]
+        public void Test6()
+        {
+            //ETANT DONNE le nombre 6
+            const int nombreArabe = 6;
+
+            //QUAND on le convertit en nombres romains
+            var resultat = ConvertisseurNombresRomains.Convertir(6);
+
+            //ALORS on obtient 'VI'
+            Assert.Equal("VI", resultat);
+        }
         [Theory]
         [InlineData(1)]
         [InlineData(2)]
