@@ -12,6 +12,7 @@
                 <= 8 => "V" + Convertir(nombreArabe - 5),
                 9 => "IX",
                 10 => "X",
+                11 => "XI",
               
             };
 
