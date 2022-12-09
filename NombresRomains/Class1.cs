@@ -20,6 +20,7 @@ namespace NombresRomains
                 19 => "XIX",
                 <= 23 => "XX" + new string('I', nombreArabe - 20),
                 24 => "XXIV",
+                25 => "XXV",
             };
 
 
