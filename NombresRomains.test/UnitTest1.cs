@@ -232,6 +232,17 @@ namespace NombresRomains.test
             //ALORS on obtient 'XIX'
             Assert.Equal("XIX", resultat);
         }
+        public void Test20()
+        {
+            //ETANT DONNE le nombre 20
+            const int nombreArabe = 20;
+
+            //QUAND on le convertit en nombres romains
+            var resultat = ConvertisseurNombresRomains.Convertir(20);
+
+            //ALORS on obtient 'XX'
+            Assert.Equal("XX", resultat);
+        }
 
         [Theory]
         [InlineData(1)]
