@@ -341,6 +341,18 @@ namespace NombresRomains.test
             //ALORS on obtient 'XXVIII'
             Assert.Equal("XXVIII", resultat);
         }
+        [Fact]
+        public void Test29()
+        {
+            //ETANT DONNE le nombre 29
+            const int nombreArabe = 29;
+
+            //QUAND on le convertit en nombres romains
+            var resultat = ConvertisseurNombresRomains.Convertir(29);
+
+            //ALORS on obtient 'XXIX'
+            Assert.Equal("XXIX", resultat);
+        }
 
 
         [Theory]
@@ -400,8 +412,8 @@ namespace NombresRomains.test
 
             //QUAND on le convertit en nombre romains
             var resultat = ConvertisseurNombresRomains.Convertir(nombreArabe);
-            // ALORS on obtient 'XV' plus <nombreArabe> -5> fois 'I'
-            var attendu = "XV" + new string('I', nombreArabe - 5);
+            // ALORS on obtient 'XV' plus <nombreArabe> - 15> fois 'I'
+            var attendu = "XV" + new string('I', nombreArabe - 15);
         }
         [Theory]
         [InlineData(20)]
@@ -417,6 +429,20 @@ namespace NombresRomains.test
             // ALORS on obtient "XX" plus <nombreArabe> fois 'I'
             var attendu = "XX" + new string('I', n - 20);
             Assert.Equal(attendu, resultat);
+        }
+        [Theory]
+        [InlineData(25)]
+        [InlineData(26)]
+        [InlineData(27)]
+        [InlineData(28)]
+        public void VingtCinqSixSeptHuit(int nombreArabe)
+        {
+            //ETANT DONNER un nombre <nombreArabe> compris entre 25 et 28 
+
+            //QUAND on le convertit en nombre romains
+            var resultat = ConvertisseurNombresRomains.Convertir(nombreArabe);
+            // ALORS on obtient 'XXV' plus <nombreArabe> -25> fois 'I'
+            var attendu = "XXV" + new string('I', nombreArabe - 25);
         }
     }
 }
