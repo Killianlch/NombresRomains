@@ -7,8 +7,9 @@
         public static string Convertir(int nombreArabe)
             => nombreArabe switch
             {
-                1 => "I",
-                2 => "II",
+                <= 3 => new string('I', nombreArabe),
+                4 => "IV",
+                5 => "V",
             };
 
 
