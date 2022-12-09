@@ -173,7 +173,7 @@ namespace NombresRomains.test
             //ALORS on obtient 'XIV'
             Assert.Equal("XIV", resultat);
         }
-
+        [Fact]
         public void Test15()
         {
             //ETANT DONNE le nombre 15
@@ -185,6 +185,7 @@ namespace NombresRomains.test
             //ALORS on obtient 'XV'
             Assert.Equal("XV", resultat);
         }
+        [Fact]
         public void Test16()
         {
             //ETANT DONNE le nombre 16
@@ -196,7 +197,7 @@ namespace NombresRomains.test
             //ALORS on obtient 'XVI'
             Assert.Equal("XVI", resultat);
         }
-
+        [Fact]
         public void Test17()
         {
             //ETANT DONNE le nombre 17
@@ -208,7 +209,7 @@ namespace NombresRomains.test
             //ALORS on obtient 'XVII'
             Assert.Equal("XVII", resultat);
         }
-
+        [Fact]
         public void Test18()
         {
             //ETANT DONNE le nombre 18
@@ -220,7 +221,7 @@ namespace NombresRomains.test
             //ALORS on obtient 'XVIII'
             Assert.Equal("XVIII", resultat);
         }
-
+        [Fact]
         public void Test19()
         {
             //ETANT DONNE le nombre 19
@@ -232,6 +233,7 @@ namespace NombresRomains.test
             //ALORS on obtient 'XIX'
             Assert.Equal("XIX", resultat);
         }
+        [Fact]
         public void Test20()
         {
             //ETANT DONNE le nombre 20
@@ -243,6 +245,19 @@ namespace NombresRomains.test
             //ALORS on obtient 'XX'
             Assert.Equal("XX", resultat);
         }
+        [Fact]
+        public void Test21()
+        {
+            //ETANT DONNE le nombre 21
+            const int nombreArabe = 21;
+
+            //QUAND on le convertit en nombres romains
+            var resultat = ConvertisseurNombresRomains.Convertir(21);
+
+            //ALORS on obtient 'XXI'
+            Assert.Equal("XXI", resultat);
+        }
+
 
         [Theory]
         [InlineData(1)]
