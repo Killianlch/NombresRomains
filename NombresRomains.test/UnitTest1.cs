@@ -88,7 +88,19 @@ namespace NombresRomains.test
             //ALORS on obtient 'VII'
             Assert.Equal("VII", resultat);
         }
-        
+        [Fact]
+        public void Test8()
+        {
+            //ETANT DONNE le nombre 8
+            const int nombreArabe = 8;
+
+            //QUAND on le convertit en nombres romains
+            var resultat = ConvertisseurNombresRomains.Convertir(8);
+
+            //ALORS on obtient 'VIII'
+            Assert.Equal("VIII", resultat);
+        }
+
         [Theory]
         [InlineData(1)]
         [InlineData(2)]
