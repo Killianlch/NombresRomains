@@ -329,6 +329,18 @@ namespace NombresRomains.test
             //ALORS on obtient 'XXVII'
             Assert.Equal("XXVII", resultat);
         }
+        [Fact]
+        public void Test28()
+        {
+            //ETANT DONNE le nombre 28
+            const int nombreArabe = 28;
+
+            //QUAND on le convertit en nombres romains
+            var resultat = ConvertisseurNombresRomains.Convertir(28);
+
+            //ALORS on obtient 'XXVIII'
+            Assert.Equal("XXVIII", resultat);
+        }
 
 
         [Theory]
