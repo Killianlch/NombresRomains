@@ -101,12 +101,25 @@ namespace NombresRomains.test
             Assert.Equal("VIII", resultat);
         }
 
+        [Fact]
+        public void Test9()
+        {
+            //ETANT DONNE le nombre 9
+            const int nombreArabe = 9;
+
+            //QUAND on le convertit en nombres romains
+            var resultat = ConvertisseurNombresRomains.Convertir(9);
+
+            //ALORS on obtient 'IX'
+            Assert.Equal("IX", resultat);
+        }
+
         [Theory]
         [InlineData(1)]
         [InlineData(2)]
         [InlineData(3)]
 
-        public void TestUnités(int n)
+        public void UnDeuxTrois(int n)
         {
             //ETANT DONNER un nombre <n> compris entre 1 et 5
             //QUAND on le convertit en nombres romains
@@ -114,6 +127,21 @@ namespace NombresRomains.test
             //ALORS on obtient <n> fois 'I'
             var attendu = new string('I', n);
             Assert.Equal(attendu, resultat);
+        }
+
+        [Theory]
+        [InlineData(5)]
+        [InlineData(6)]
+        [InlineData(7)]
+        [InlineData(8)]
+        public void CinqSixSeptHuit (int nombreArabe)
+        {
+            //ETANT DONNER un nombre <nombreArabe> compris entre 5 et 8 
+
+            //QUAND on le convertit en nombre romains
+            var resultat = ConvertisseurNombresRomains.Convertir(nombreArabe);
+            // ALORS on obtient 'V' plus <nombreArabe> -5> fois 'I'
+            var attendu = 'V' + new string('I', nombreArabe - 5);
         }
 
     }
