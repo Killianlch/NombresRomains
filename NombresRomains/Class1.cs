@@ -8,6 +8,7 @@
             => nombreArabe switch
             {
                 1 => "I",
+                2 => "II",
             };
 
 
