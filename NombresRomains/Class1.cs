@@ -22,6 +22,7 @@ namespace NombresRomains
                 24 => "XXIV",
                 25 => "XXV",
                 26 => "XXVI",
+                27 => "XXVII",
             };
 
 
