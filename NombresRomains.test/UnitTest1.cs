@@ -221,6 +221,18 @@ namespace NombresRomains.test
             Assert.Equal("XVIII", resultat);
         }
 
+        public void Test19()
+        {
+            //ETANT DONNE le nombre 19
+            const int nombreArabe = 19;
+
+            //QUAND on le convertit en nombres romains
+            var resultat = ConvertisseurNombresRomains.Convertir(19);
+
+            //ALORS on obtient 'XIX'
+            Assert.Equal("XIX", resultat);
+        }
+
         [Theory]
         [InlineData(1)]
         [InlineData(2)]
@@ -267,6 +279,20 @@ namespace NombresRomains.test
             Assert.Equal(attendu, resultat);
         }
 
+        [Theory]
+        [InlineData(15)]
+        [InlineData(16)]
+        [InlineData(17)]
+        [InlineData(18)]
+        public void QuinzeSeizeDixseptDixhuit(int nombreArabe)
+        {
+            //ETANT DONNER un nombre <nombreArabe> compris entre 15 et 18 
+
+            //QUAND on le convertit en nombre romains
+            var resultat = ConvertisseurNombresRomains.Convertir(nombreArabe);
+            // ALORS on obtient 'XV' plus <nombreArabe> -5> fois 'I'
+            var attendu = "XV" + new string('I', nombreArabe - 5);
+        }
 
     }
 }
