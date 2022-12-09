@@ -161,6 +161,18 @@ namespace NombresRomains.test
             //ALORS on obtient 'XIII'
             Assert.Equal("XIII", resultat);
         }
+        [Fact]
+        public void Test14()
+        {
+            //ETANT DONNE le nombre 14
+            const int nombreArabe = 14;
+
+            //QUAND on le convertit en nombres romains
+            var resultat = ConvertisseurNombresRomains.Convertir(14);
+
+            //ALORS on obtient 'XIV'
+            Assert.Equal("XIV", resultat);
+        }
         [Theory]
         [InlineData(1)]
         [InlineData(2)]
@@ -190,6 +202,23 @@ namespace NombresRomains.test
             // ALORS on obtient 'V' plus <nombreArabe> -5> fois 'I'
             var attendu = 'V' + new string('I', nombreArabe - 5);
         }
-         
+
+        [Theory]
+        [InlineData(10)]
+        [InlineData(11)]
+        [InlineData(12)]
+        [InlineData(13)]
+        public void DixOnzeDouzeTreize(int n)
+        {
+            // ETANT DONNE un nombre <n> compris entre 10 et 13
+            // QUAND on le convertit en nombre romain
+            var resultat = ConvertisseurNombresRomains.Convertir(n);
+
+            // ALORS on obtient "X" plus <nombreArabe> fois 'I'
+            var attendu = "X" + new string('I', n - 10);
+            Assert.Equal(attendu, resultat);
+        }
+
+
     }
 }

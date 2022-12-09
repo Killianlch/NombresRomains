@@ -1,4 +1,6 @@
-﻿namespace NombresRomains
+﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+
+namespace NombresRomains
 {
     public static class ConvertisseurNombresRomains
     {
@@ -12,9 +14,8 @@
                 <= 8 => "V" + Convertir(nombreArabe - 5),
                 9 => "IX",
                 10 => "X",
-                11 => "XI",
-                12 => "XII",
-                13 => "XIII",
+                <= 13 => "X" + new string('I', nombreArabe - 10),
+                14 => "XIV",
               
             };
 
