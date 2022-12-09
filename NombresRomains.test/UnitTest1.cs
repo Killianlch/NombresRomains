@@ -257,6 +257,18 @@ namespace NombresRomains.test
             //ALORS on obtient 'XXI'
             Assert.Equal("XXI", resultat);
         }
+        [Fact]
+        public void Test22()
+        {
+            //ETANT DONNE le nombre 22
+            const int nombreArabe = 22;
+
+            //QUAND on le convertit en nombres romains
+            var resultat = ConvertisseurNombresRomains.Convertir(22);
+
+            //ALORS on obtient 'XXII'
+            Assert.Equal("XXII", resultat);
+        }
 
 
         [Theory]
