@@ -22,6 +22,7 @@ namespace NombresRomains
                 24 => "XXIV",
                 <= 28 => "XXV" + Convertir(nombreArabe - 25),
                 29 => "XXIX",
+                30 => "XXX",
             };
 
 
