@@ -19,6 +19,7 @@ namespace NombresRomains
                 15 => "XV",
                 16 => "XVI", 
                 17 => "XVII",
+                18 => "XVIII",
               
             };
 
