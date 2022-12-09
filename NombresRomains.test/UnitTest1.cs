@@ -149,6 +149,18 @@ namespace NombresRomains.test
             //ALORS on obtient 'XII'
             Assert.Equal("XII", resultat);
         }
+        [Fact]
+        public void Test13()
+        {
+            //ETANT DONNE le nombre 13
+            const int nombreArabe = 13;
+
+            //QUAND on le convertit en nombres romains
+            var resultat = ConvertisseurNombresRomains.Convertir(13);
+
+            //ALORS on obtient 'XIII'
+            Assert.Equal("XIII", resultat);
+        }
         [Theory]
         [InlineData(1)]
         [InlineData(2)]
