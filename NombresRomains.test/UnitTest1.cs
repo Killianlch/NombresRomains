@@ -143,6 +143,6 @@ namespace NombresRomains.test
             // ALORS on obtient 'V' plus <nombreArabe> -5> fois 'I'
             var attendu = 'V' + new string('I', nombreArabe - 5);
         }
-
+         
     }
 }
