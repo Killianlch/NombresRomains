@@ -197,6 +197,18 @@ namespace NombresRomains.test
             Assert.Equal("XVI", resultat);
         }
 
+        public void Test17()
+        {
+            //ETANT DONNE le nombre 17
+            const int nombreArabe = 17;
+
+            //QUAND on le convertit en nombres romains
+            var resultat = ConvertisseurNombresRomains.Convertir(17);
+
+            //ALORS on obtient 'XVII'
+            Assert.Equal("XVII", resultat);
+        }
+
         [Theory]
         [InlineData(1)]
         [InlineData(2)]
